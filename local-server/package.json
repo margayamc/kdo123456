@@ -1,0 +1,15 @@
+{
+  "name": "deepseek-code-agent-server",
+  "version": "1.0.0",
+  "description": "Local server for DeepSeek Code Agent - handles file operations and Nvidia API integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0"
+  }
+}
