@@ -16,7 +16,6 @@ const fs = require('fs-extra');
 const cors = require('cors');
 const axios = require('axios');
 const path = require('path');
-require('dotenv').config();
 
 // Configuration from environment variables
 const CODABASE_PATH = process.env.CODABASE_PATH;
@@ -25,15 +24,11 @@ const NVIDIA_API_KEY = process.env.NVIDIA_API_KEY;
 // Validate required environment variables
 if (!CODABASE_PATH) {
   console.error('ERROR: CODABASE_PATH environment variable is required');
-  console.error('Please set it in .env file or as an environment variable');
-  console.error('Example: CODABASE_PATH=/path/to/your/project');
   process.exit(1);
 }
 
 if (!NVIDIA_API_KEY) {
   console.error('ERROR: NVIDIA_API_KEY environment variable is required');
-  console.error('Please set it in .env file or as an environment variable');
-  console.error('Get your API key from: https://build.nvidia.com/');
   process.exit(1);
 }
 
